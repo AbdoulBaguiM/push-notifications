@@ -1,0 +1,7 @@
+{
+  "name": "PUSH NOTIFICATIONS",
+  "version": "0.1.0",
+  "description": "This is the test app. The app sends push notifications by country to all users.",
+  "title": "Push Notifications",
+  "url" : "https://%app_url%"
+}

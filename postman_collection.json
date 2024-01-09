@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "83a9c4a0-7e24-42d1-925e-ccbe3dd2c50b",
+		"name": "push notifications",
+		"description": "Test task https://github.com/sevaske/test-push-notifications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "send",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "World",
+							"type": "text"
+						},
+						{
+							"key": "country_id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"push",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Hello",
+							"disabled": true
+						},
+						{
+							"key": "message",
+							"value": "World",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "details",
+							"type": "text"
+						},
+						{
+							"key": "notification_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"push",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CRON",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "action",
+							"value": "cron",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{APP_URL}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"push",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
