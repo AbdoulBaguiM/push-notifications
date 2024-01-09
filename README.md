@@ -46,7 +46,4 @@ The app should not only work, but also **work fast and safely**. Think about the
   vendor/bin/phinx seed:run -s CountriesSeeder -s UsersSeeder -s DevicesSeeder
 ```
 
---- 
-
-### When you're done
-Send a link of your repository to s.mnatcakanian@gasable.com when you're done. Let us know how many hours you spent on this task.
+---
